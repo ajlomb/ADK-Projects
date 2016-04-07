@@ -1,0 +1,111 @@
+Debugging Fundamentals 1
+Objective:  add logging staements to code; show toast message
+
+5 Types of Log Messages
+Verbose 	most information
+Debug		can use variables/messages to track actions; stripped out in final version
+Info		Informative messages; things you might want to leave in
+Warning		depreciated variables/commands; features to be potentiallly removed
+Error		memory leaks, hardware problems, usually related to crashes or potential for crashing
+
+LogCat
+Log.d("MainActivity", "The onCreate() method was called");			Static method - "d" is replacable for other debugging types
+
+Toasts - messages tha tpop up to the user showing user info that is important to them
+	can't make a reference to it, only exists for a brief time
+	Toast.makeText(MainActivity.this, "Saved email to drafts folder.", Toast.LENGTH_SHORT).show();
+	LENGTH_SHORT = 2 sec
+	LENGTH_LONG = 3.5sec
+	.show()
+	
+	Good practice to strip your log files before sharing to github
+	
+	Creating a break point - click bug to run in debuggmode - allows use of breaks to run segments of code rather than the whole program in one go.
+	
+Filters
+	Log.d(TAG@, "this is a filetered log message")
+		edit filter config 	>>	"log tag"			power of custom tags
+		requires at least 4 characters to search tags
+	
+	
+Data Structures
+	Boolean, integers, decimals, characters, strings
+	
+double vs float - double(64 bits) allocates twice the memory for the integer value than a float(32 bits).
+integers - 32 bits
+short 	 - 16 bits
+long 	 - 64 bits
+
+"=" 	assignment
+"==" 	boolean 'equal to' operation; comparison operator
+
+Primitives vs objects 				= objects start with capital letters, primitive are lowercase
+Primitive 	= pass-by-value; simpler and takes less resources
+Pass-by-value vs pass-by-reference 	= 	value is given a value, reference tells the program where to go to find the input
+
+char vs String 	=	'a' vs "words plus"
+
+Instantiation 	= Process of creating an instance of something
+
+System.out.println("hello world".replace("hello", "goodbye"));			//replace example
+
+String blue = "blue";
+boolean withSign = (blue == "blue");
+boolean withWords = blue).equals("blue");
+
+
+
+READ THE STRING to INTEGER SLIDE
+casting a string into an integet	
+
+class Main {
+  public static void main(String[] args) {
+  	System.out.println("You are given a segment of DNA with the following sequence of bases: ATACGT.  What would the companion segment of DNA look like?");
+    System.out.println("ATACGT".replace('A', 'B').replace('T', 'A').replace('B', 'T').replace('C', 'Z').replace('G', 'C').replace('Z', 'G'));
+    System.out.println("If the original bases were being transcribed into RNA from DNA, the output would be...");
+    System.out.println("ATACGT".replace('A', 'B').replace('T', 'A').replace('B', 'U').replace('C', 'Z').replace('G', 'C').replace('Z', 'G'));
+    
+  }
+}
+
+
+
+Function (or Methods) and Scope
+
+Writing functions and languages
+	byte code is the language java virtual machine reads
+	Source Code ==> byte code (read by VM)
+	javac MainActivity java MainActivity
+	
+		two basic phases to go through when going from code in a file to a program running
+			compile time - during development
+			Runtime - load time when the program is started
+			
+	public static void main(String[] args);		Main Method - entry ponit of program
+	
+public void interestingMethod( String Input ) throws IOException
+{
+	System.out.println("Iam making" + input + "interesting!");
+}
+
+Modifier -	Access vs Non-Access modifiers
+	private - visible only to the class
+	protected - every method inside this class, and subclasses, can access/see the information
+	public - can be referred to by any classes, subclasses
+	Friendly - 
+Non-Access Modifier
+	static - for creating class methods and variables
+	final - for making something permanent; can't be changed
+	abstract - method without implementation
+	synchronized - meh for now
+	
+	Scope - only certain variable are available within the class they are declared
+	Use global variables when you want to recall that variable multiple times
+	
+	Method Name
+		convention = camel-cased (getName())
+	Parameters (enclosed within parenthesis)
+		public static int reutrnSum(int num1) {
+		int sum = num1 + num1
+		}
+	Method Body - everything in the curly bracesSystem

@@ -1,0 +1,85 @@
+
+
+
+
+
+
+//Print String Legnth, Compare and Display Biggest Number (requires editing to run)
+class Main {
+  //public static void main(String[] args) {
+  //	String aString = "This is our string.";
+  	//int length = aString.length();
+  	
+  	//System.out.print (length);
+  	
+  //	public static void main(String[] args) {
+  	//	int int1 = 60;
+  	//	int int2 = 75;
+  	//	int int3 = 35;
+  	//	System.out.println(int1);
+  	//	System.out.println(int2);
+  		if(int1 > int2 && int1 > int3) {
+  			System.out.println(int1);
+  		}
+  		else if (int2 > int3) {
+  			System.out.println(int2);
+  		}
+  		else {
+  			System.out.println(int3);
+  		}
+  	}
+  }
+
+//Vowel Identifier (functional as is)
+class Main {
+	
+  public static void main(String[] args) {
+  	
+    char alpha = 'e';
+    if((alpha == 'a') || (alpha == 'e') || (alpha == 'i') || (alpha == 'o') || (alpha == 'u')) {
+    	System.out.println("True");
+    }
+    else{
+    	System.out.println("False");
+    }
+   }
+}
+
+//Dividing by 152 (functional as is)
+class Main {
+  public static void main(String[] args) {
+    
+    double onefivetwo = 152;
+    double given1 = 3;
+    double given2 = 43;
+    double given3 = 8;
+    
+    System.out.println(onefivetwo / given1);
+    System.out.println(onefivetwo / given2);
+    System.out.println(onefivetwo / given3);
+  }
+}
+
+//Compare characters from two strings (Functional as is)
+public class Main {
+  public static void main(String[] args) {
+  	String firstWord = "Times";
+  	String firstLetter = "";
+  	firstLetter = firstWord.substring(2,3);
+  	
+  	String secondWord = "thyme";
+  	String secondLetter = "";
+  	secondLetter = secondWord.substring(0,1);
+  	
+  	System.out.println(firstLetter);
+  	System.out.println(secondLetter);
+  	
+  	if (firstLetter.equalsIgnoreCase(secondLetter)) {
+  		System.out.println("True");
+  	} 
+	else {
+  		System.out.println("False");
+  	}
+  }
+}
+
